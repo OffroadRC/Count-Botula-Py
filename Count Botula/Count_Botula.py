@@ -45,7 +45,7 @@ RowBotTestDB = mysql.connector.connect(
 print(f"Connected to {DATABASE_NAME}.")
 DBcursor = RowBotTestDB.cursor()
 
-intents = discord.Intents.all()
+intents = discord.Intents(messages=True, members=True)
 bot = commands.Bot(command_prefix=CMD_PREFIX, intents=intents)
 
 @bot.event
